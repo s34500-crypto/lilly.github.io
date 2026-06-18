@@ -3,15 +3,16 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #6F4E37;
-    color: #FFC1CC;
+    background-color: #3D2314; /* เปลี่ยนเป็นสีน้ำตาลเข้มช็อกโกแลต */
+    color: #F48FB1;            /* เปลี่ยนเป็นสีชมพูเข้ม สว่างพอให้อ่านง่ายบนพื้นหลังเข้ม */
 }
 
 header {
-    background: #FFF0F5;
-    color: white;
+    background: #2C1A11;       /* ปรับพื้นหลังสลับเป็นน้ำตาลเข้มสุดๆ เพื่อให้ดูมีมิติ */
+    color: #FFC1CC;            /* ตัวหนังสือใน Header เป็นสีชมพูอ่อนเพื่อความเด่น */
     padding: 20px 0;
     text-align: center;
+    border-bottom: 2px solid #F48FB1; /* เพิ่มเส้นคั่นสีชมพูเข้ม */
 }
 
 header h1 {
@@ -26,6 +27,8 @@ section {
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
-    background: white;
+    background: #4A3525;       /* ปรับกล่องเนื้อหาเป็นสีน้ำตาลโกโก้ */
+    color: #FFF0F5;            /* ตัวหนังสือในกล่องใช้สีชมพูขาว เพื่อให้อ่านเนื้อหาได้สบายตาที่สุด */
     border-radius: 8px;
+    border: 1px solid #F48FB1; /* เพิ่มขอบกล่องสีชมพูเข้มให้ดูสวยงาม */
 }
