@@ -42,3 +42,26 @@ document.addEventListener('DOMContentLoaded', function () {
     // รันอีกครั้งเพื่อความชัวร์หากมีการเปลี่ยนแปลงโครงสร้างหน้าเว็บ
     setupBounceEffect();
 </script>
+<script>
+    // ดึงกล่องย่อยทั้งหมดที่อยู่ใน .project-list
+    const projectBoxes = document.querySelectorAll('.project-list .sub-box');
+
+    projectBoxes.forEach(box => {
+        box.addEventListener('click', () => {
+            // 1. ลบคลาสเก่าออกก่อนเพื่อรีเซ็ตสถานะ
+            box.classList.remove('bounce-active');
+            
+            // 2. ใช้เทคนิค void บังคับให้เบราว์เซอร์เคลียร์แคชแอนิเมชันเก่าทันที (Reflow)
+            void box.offsetWidth; 
+            
+            // 3. ใส่คลาสแอนิเมชันกลับเข้าไปใหม่ ทำให้เด้งรัวๆ ได้ไม่ค้าง
+            box.classList.add('bounce-active');
+        });
+
+        // เมื่อแอนิเมชันเด้งจบในแต่ละรอบ ให้ลบคลาสออกเพื่อเตรียมพร้อมสำหรับการคลิกครั้งต่อไป
+        box.addEventListener('animationend', () => {
+            box.classList.remove('bounce-active');
+        });
+    });
+</script>
+
