@@ -1,90 +1,94 @@
+/* --- ปรับแต่งธีมสีใหม่: ฟ้า เขียว ชมพู พาสเทลน่ารักสดใส --- */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Kanit', Arial, sans-serif; /* แนะนำฟอนต์มนๆ น่ารัก */
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #3D2314; /* สีน้ำตาลเข้มช็อกโกแลต (คงเดิม) */
-    color: #E6C280;            /* เปลี่ยนเป็นสีทองสว่าง อ่านง่ายบนพื้นหลังเข้ม */
+    background-color: #E8F5E9; /* พื้นหลังสีเขียวพาสเทลอ่อนๆ ละมุนตา */
+    color: #4A4A4A;            /* ตัวหนังสือสีเทาเข้ม อ่านง่ายไม่แข็งเกินไป */
 }
 
 header {
-    background: #2C1A11;       /* สีน้ำตาลเข้มสุดๆ (คงเดิม) */
-    color: #FFF3DD;            /* เปลี่ยนเป็นสีครีมทองอ่อนๆ ให้ตัวหนังสือเด่น */
-    padding: 20px 0;
+    background: linear-gradient(135deg, #B3E5FC, #F8BBD0); /* ไล่สีฟ้าพาสเทลไปชมพูพาสเทล */
+    color: #ffffff;
+    padding: 30px 0;
     text-align: center;
-    border-bottom: 2px solid #E6C280; /* เปลี่ยนเป็นเส้นคั่นสีทอง */
+    border-bottom: 4px dashed #FFF; /* เส้นใต้หัวข้อแบบเส้นประสีขาวน่ารักๆ */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1); /* มิติเงาหลังตัวอักษร */
 }
 
 header p {
-    margin: 5px 0 0;
+    margin: 8px 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
+/* --- กล่องข้อความหลัก --- */
 section {
-    padding: 20px;
-    margin: 20px auto;
+    padding: 25px;
+    margin: 25px auto;
     max-width: 800px;
-    background: #4A3525;       /* สีน้ำตาลโกโก้ (คงเดิม) */
-    color: #FAFAFA;            /* เปลี่ยนเป็นสีขาวนวล (Off-White) เพื่อให้อ่านเนื้อหาได้สบายตาที่สุด */
-    border-radius: 8px;
-    border: 1px solid #E6C280; /* เปลี่ยนเป็นขอบกล่องสีทอง */
-}
-/* --- ส่วนที่เพิ่มเติมเพื่อความน่ารักและลูกเล่นการขยับ --- */
-
-section {
-    /* เพิ่ม Transition เพื่อให้เวลาขยับดูนุ่มนวล ไม่กระตุก */
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    
-    /* เพิ่มเงานุ่มๆ ให้กล่องดูมีมิติลอยขึ้นมา */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: #ffffff; /* กล่องหลักสีขาวสะอาดตา */
+    border-radius: 16px;  /* ขอบมนน่ารัก */
+    border: 3px solid #B3E5FC; /* ขอบสีฟ้าพาสเทล */
+    box-shadow: 0 6px 12px rgba(179, 229, 252, 0.3); /* เงาสีฟ้าละมุน */
 }
 
-/* ลูกเล่นเมื่อเมาส์ชี้ (Hover): กล่องจะลอยขึ้นเล็กน้อย */
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(230, 194, 128, 0.3); /* เงาสีทองจางๆ */
-    border-color: #FFF3DD; /* ขอบสว่างขึ้นนิดหน่อย */
-}
-
-/* ลูกเล่นเมื่อ "คลิก" (Active): กล่องจะยุบตัวลงเหมือนปุ่มกดนุ่มๆ */
-section:active {
-    transform: scale(0.97) translateY(2px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-}
-
-/* จัดสไตล์หัวข้อภายในกล่อง (h2) ให้แยกเป็นสัดส่วนและน่ารัก */
 section h2 {
-    color: #E6C280;          /* หัวข้อสีทอง */
+    color: #FF4081; /* หัวข้อหลักสีชมพูสดใส */
     margin-top: 0;
-    margin-bottom: 15px;
-    padding-bottom: 8px;
-    border-bottom: 2px dashed #E6C280; /* เส้นใต้หัวข้อแบบเส้นประ เพิ่มความคิวท์ */
-    display: inline-block;   /* ให้เส้นประยาวเท่ากับตัวอักษร */
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #F8BBD0;
+    padding-bottom: 5px;
+    display: inline-block;
 }
 
-/* แถม: ปรับแต่ง Scrollbar ให้เข้ากับธีม (สำหรับความใส่ใจในรายละเอียด) */
-::-webkit-scrollbar {
-    width: 10px;
+/* --- โครงสร้างกล่องข้อความย่อย (Sub-boxes) --- */
+.sub-box {
+    background-color: #FCE4EC; /* กล่องย่อยสีชมพูอ่อนพาสเทล */
+    border: 2px solid #F8BBD0;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 12px 0;
+    cursor: pointer;
+    user-select: none; /* ป้องกันไม่ให้คลุมดำตัวหนังสือเวลาดับเบิ้ลคลิก */
+    transition: transform 0.1s ease, background-color 0.3s;
 }
-::-webkit-scrollbar-track {
-    background: #2C1A11;
-}
-::-webkit-scrollbar-thumb {
-    background: #E6C280;
-    border-radius: 10px;
-}
-<section>
-    <h2>🍫 เมนูแนะนำ</h2>
-    <p>นี่คือกล่องข้อความส่วนแรก เมื่อคุณเอาเมาส์มาชี้หรือลองคลิก มันจะมีเอฟเฟกต์เด้งดึ๋งนุ่มๆ น่ารักมาก!</p>
-</section>
 
-<section>
-    <h2>☕️ เกี่ยวกับเรา</h2>
-    <p>การแยกกล่องด้วยเส้นประสีทองด้านบนหัวข้อ ช่วยให้เนื้อหาอ่านง่ายและแบ่งเป็นสัดส่วนชัดเจนขึ้นครับ</p>
-</section>
+/* สลับสีกล่องย่อยอันที่สองให้เป็นสีฟ้าพาสเทล จะได้ดูสดใสหลากหลาย */
+.sub-box:nth-child(even) {
+    background-color: #E1F5FE; /* ฟ้าพาสเทลอ่อน */
+    border-color: #B3E5FC;
+}
 
+/* เวลาเอาเมาส์ไปชี้กล่องย่อย */
+.sub-box:hover {
+    background-color: #E8F5E9; /* เปลี่ยนเป็นเขียวพาสเทลเวลาชี้ */
+    border-color: #A5D6A7;
+}
+
+/* --- เอฟเฟกต์แอนิเมชันสำหรับกดแล้วเด้งดึ๋ง (Bounce & Shake) --- */
+@keyframes bounceClick {
+    0% { transform: scale(1); }
+    30% { transform: scale(0.85) rotate(-2deg); } /* ยุบตัวลงและเอียงเล็กน้อย */
+    60% { transform: scale(1.15) rotate(3deg); }   /* เด้งขยายใหญ่ขึ้นและเอียงสลับ */
+    100% { transform: scale(1) rotate(0deg); }      /* กลับสู่ขนาดปกติ */
+}
+
+/* คลาสที่จะถูกเติมเข้าด้วย JavaScript เมื่อคลิก */
+.bounce-active {
+    animation: bounceClick 0.4s ease-in-out;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-size: 0.9rem;
+}
