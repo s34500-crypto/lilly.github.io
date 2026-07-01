@@ -32,3 +32,49 @@ section {
     border-radius: 8px;
     border: 1px solid #E6C280; /* เปลี่ยนเป็นขอบกล่องสีทอง */
 }
+/* --- ส่วนที่เพิ่มเติมเพื่อความน่ารักและลูกเล่นการขยับ --- */
+
+section {
+    /* เพิ่ม Transition เพื่อให้เวลาขยับดูนุ่มนวล ไม่กระตุก */
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    
+    /* เพิ่มเงานุ่มๆ ให้กล่องดูมีมิติลอยขึ้นมา */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ลูกเล่นเมื่อเมาส์ชี้ (Hover): กล่องจะลอยขึ้นเล็กน้อย */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(230, 194, 128, 0.3); /* เงาสีทองจางๆ */
+    border-color: #FFF3DD; /* ขอบสว่างขึ้นนิดหน่อย */
+}
+
+/* ลูกเล่นเมื่อ "คลิก" (Active): กล่องจะยุบตัวลงเหมือนปุ่มกดนุ่มๆ */
+section:active {
+    transform: scale(0.97) translateY(2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* จัดสไตล์หัวข้อภายในกล่อง (h2) ให้แยกเป็นสัดส่วนและน่ารัก */
+section h2 {
+    color: #E6C280;          /* หัวข้อสีทอง */
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px dashed #E6C280; /* เส้นใต้หัวข้อแบบเส้นประ เพิ่มความคิวท์ */
+    display: inline-block;   /* ให้เส้นประยาวเท่ากับตัวอักษร */
+    font-size: 1.5rem;
+}
+
+/* แถม: ปรับแต่ง Scrollbar ให้เข้ากับธีม (สำหรับความใส่ใจในรายละเอียด) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #2C1A11;
+}
+::-webkit-scrollbar-thumb {
+    background: #E6C280;
+    border-radius: 10px;
+}
